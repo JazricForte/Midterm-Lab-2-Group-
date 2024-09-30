@@ -7,9 +7,9 @@
 
 var player;
 var tie = 0;
-    var win = 0;
-    var lose = 0;
-
+var win = 0;
+var lose = 0;
+var winning = 2;
 function RandomNumber(max) {
     return Math.floor(Math.random() * max);
 }
@@ -36,43 +36,47 @@ function PlayButton() {
         else if((player == 0) && (opponent == 2)) {
             console.log("You win!");
             win++;
+            document.getElementById('score1').textContent = win;
         }
         else if((player == 2) && (opponent == 0)) {
             console.log("You lose!");
             lose++;
+            document.getElementById('score2').textContent = lose;
         }
         else if((player == 1) && (opponent == 0)) {
             console.log("You win!");
             win++;
+            document.getElementById('score1').textContent = win;
         }
         else if((player == 0) && (opponent == 1)) {
             console.log("You lose!");
             lose++;
+            document.getElementById('score2').textContent = lose;
         }
         else if((player == 2) && (opponent == 1)) {
             console.log("You win!");
             win++;
+            document.getElementById('score1').textContent = win;
         }
         else if((player == 1) && (opponent == 2)) {
             console.log("You lose!");
             lose++;
+            document.getElementById('score2').textContent = lose;
         }
 }
 
-function Scoreboard() {
-    var walang_nabago_pa;
+function Check() {
+    if(win === winning) {
+        document.getElementById('result').textContent = "Player 1 Wins the Game!";
+    }
+    else if (lose === winning) {
+        document.getElementById('result').textContent = "Player 2 Wins the Game!";
+    }
 }
 
-function Roundcount() {
-
+function disableButtons() {
+    
 }
-
-
-
-function RemoveButtons() {
-
-}
-
 
 function RetryButton() {
 
