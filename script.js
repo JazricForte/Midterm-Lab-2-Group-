@@ -10,6 +10,9 @@ var tie = 0;
 var win = 0;
 var lose = 0;
 var winning = 2;
+var container = document.getElementById('result');
+var container2 = document.getElementById('Retry');
+
 function RandomNumber(max) {
     return Math.floor(Math.random() * max);
 }
@@ -71,14 +74,35 @@ function PlayButton() {
         }
 }
 
+function RetryButton() {
+    tie = 0;
+    win = 0;
+    lose = 0;
+    document.getElementById('score1').textContent = win;
+    document.getElementById('score2').textContent = lose;
+    container.remove();
+    container2.remove();
+    document.querySelectorAll('button').forEach(button => {
+        button.disabled = false;
+    });
+}
+
+
 function Check() {
-    if(win === winning) {
-        document.getElementById('result').textContent = "Player 1 Wins the Game!";
-        disableButtons()
+    console.log(lose, win, winning);
+    if(win == winning) {
+        document.body.appendChild(container);
+        document.body.appendChild(container2);
+        container.textContent = "Player 1 Wins the Game!";
+        disableButtons() 
+        container2.innerHTML = '<button onclick = "RetryButton()">Retry</button>'
     }
-    else if (lose === winning) {
-        document.getElementById('result').textContent = "Player 2 Wins the Game!";
+    else if (lose == winning) {
+        document.body.appendChild(container);
+        document.body.appendChild(container2);
+        container.textContent = "Player 2 Wins the Game!";
         disableButtons()
+        container2.innerHTML = '<button onclick = "RetryButton()">Retry</button>'
     }
 }
 
@@ -88,7 +112,4 @@ function disableButtons() {
     });
 }
 
-function RetryButton() {
-
-}
 
