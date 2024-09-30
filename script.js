@@ -14,6 +14,42 @@ function TryAgain() {
 //rock > scissor but rock < paper
 //paper > rock but paper < scissor
 // scissor > paper but scissor < rock
+
+function RockButton() {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function PlayButton() {
     var opponent = RandomNumber(3);
 
