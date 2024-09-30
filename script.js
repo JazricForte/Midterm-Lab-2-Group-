@@ -37,45 +37,55 @@ function PlayButton() {
             console.log("You win!");
             win++;
             document.getElementById('score1').textContent = win;
+            Check()
         }
         else if((player == 2) && (opponent == 0)) {
             console.log("You lose!");
             lose++;
             document.getElementById('score2').textContent = lose;
+            Check()
         }
         else if((player == 1) && (opponent == 0)) {
             console.log("You win!");
             win++;
             document.getElementById('score1').textContent = win;
+            Check()
         }
         else if((player == 0) && (opponent == 1)) {
             console.log("You lose!");
             lose++;
             document.getElementById('score2').textContent = lose;
+            Check()
         }
         else if((player == 2) && (opponent == 1)) {
             console.log("You win!");
             win++;
             document.getElementById('score1').textContent = win;
+            Check()
         }
         else if((player == 1) && (opponent == 2)) {
             console.log("You lose!");
             lose++;
             document.getElementById('score2').textContent = lose;
+            Check()
         }
 }
 
 function Check() {
     if(win === winning) {
         document.getElementById('result').textContent = "Player 1 Wins the Game!";
+        disableButtons()
     }
     else if (lose === winning) {
         document.getElementById('result').textContent = "Player 2 Wins the Game!";
+        disableButtons()
     }
 }
 
 function disableButtons() {
-    
+    document.querySelectorAll('button').forEach(button => {
+        button.disabled = true;
+    });
 }
 
 function RetryButton() {
