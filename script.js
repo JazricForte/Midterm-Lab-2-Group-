@@ -6,7 +6,6 @@
 // scissor > paper but scissor < rock
 
 var player;
-var totalscore;
 var tie = 0;
     var win = 0;
     var lose = 0;
@@ -58,13 +57,10 @@ function PlayButton() {
             console.log("You lose!");
             lose++;
         }
-
-    
 }
 
 function Scoreboard() {
-    var container = document.getElementById('')
-
+    var walang_nabago_pa;
 }
 
 function Roundcount() {
