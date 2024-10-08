@@ -16,7 +16,7 @@ var container3 = document.getElementById('playerChoice');
 var container4 = document.getElementById('computerChoice');
 var compChoice = "";
 var bato = "bato.jpg";
-var papel = "papel.png";
+var papel = "papel.jpg";
 var scissor = "scissor.jpg";
 
 
