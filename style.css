@@ -28,7 +28,14 @@ body{
     margin-left: 300px;
     margin-bottom: 50px;
   }
-  
+
+  .image{
+    display: flex;
+  }
+
+  .computerImage{
+    margin-left: 300px;
+  }
   
   .choices button{
     margin-top: 50px;

@@ -12,6 +12,13 @@ var lose = 0;
 var winning = 2;
 var container = document.getElementById('result');
 var container2 = document.getElementById('Retry');
+var container3 = document.getElementById('playerChoice');
+var container4 = document.getElementById('computerChoice');
+var compChoice = "";
+var bato = "bato.jpg";
+var papel = "papel.png";
+var scissor = "scissor.jpg";
+
 
 function RandomNumber(max) {
     return Math.floor(Math.random() * max);
@@ -19,18 +26,49 @@ function RandomNumber(max) {
 
 function RockButton() {
     player = 0;
+    ChoiceImage();
 }
 
 function PaperButton() {
     player = 1;
+    ChoiceImage();
 }
 
 function ScissorButton() {
     player = 2;
+    ChoiceImage();
+}
+
+function ChoiceImage() {
+    let imgChoice = "";
+
+    if(player == 0){
+        imgChoice = bato;
+    }
+    else if(player == 1){
+        imgChoice = papel;
+    }
+    else if(player == 2){
+        imgChoice = scissor;
+    }
+
+    container3.innerHTML = '<img src="' + imgChoice + ' " alt="Player choice"> <img src="';
+    container4.innerHTML = '<img src="' + "graybox.jpg" + ' " alt="Computer choice"></img>';
 }
 
 function PlayButton() {
     var opponent = RandomNumber(3);
+
+    if(opponent == 0){
+        compChoice = bato;
+    }
+    else if(opponent == 1){
+        compChoice = papel;
+    }
+    else if(opponent == 2){
+        compChoice = scissor;
+    }
+    container4.innerHTML = '<img src="' + compChoice + ' " alt="Computer choice"></img>';
 
         if(player == opponent) {
             console.log("TIE!");
@@ -104,6 +142,8 @@ function Check() {
         disableButtons()
         container2.innerHTML = '<button onclick = "RetryButton()">Retry</button>'
     }
+
+    compChoice = "graybox.jpg";
 }
 
 function disableButtons() {
