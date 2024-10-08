@@ -93,14 +93,14 @@ function Check() {
     if(win == winning) {
         document.body.appendChild(container);
         document.body.appendChild(container2);
-        container.textContent = "Player 1 Wins the Game!";
+        container.textContent = "Player Wins the Game!";
         disableButtons() 
         container2.innerHTML = '<button onclick = "RetryButton()">Retry</button>'
     }
     else if (lose == winning) {
         document.body.appendChild(container);
         document.body.appendChild(container2);
-        container.textContent = "Player 2 Wins the Game!";
+        container.textContent = "Computer Wins!";
         disableButtons()
         container2.innerHTML = '<button onclick = "RetryButton()">Retry</button>'
     }
