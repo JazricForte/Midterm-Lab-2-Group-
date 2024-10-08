@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm Lab 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <button onclick = "PlayButton()">Play</button>
+    <h1>Rock Paper Scissors</h1>
 
-    <button onclick = "RockButton()">Rock</button>
+    <div class="choices">
+        
+    <button onclick = "RockButton()">🪨</button>
 
-    <button onclick= "PaperButton()">Paper</button>
+    <button onclick= "PaperButton()">📃</button>
 
-    <button onclick= "ScissorButton()">Scissor</button>
+    <button onclick= "ScissorButton()">✂️</button>
+    </div>
 
-    <div class = "scoreboard">
-        <p>Player: <span id="score1">0</span></p>
-        <p>Computer: <span id="score2">0</span></p>
+    
+    <div class ="play">
+        <button onclick = "PlayButton()">Play</button>
     </div>
     
+    <div class= "picked">
+        <div id = "player">Player: </div>
+        <div id = "computer">Computer: </div> 
+    </div>
+
     <h2 id="result"></h2>
     <h3 id="Retry"></h3>
 
     <script src = "script.js"></script>
 </body>
 </html>
+
+

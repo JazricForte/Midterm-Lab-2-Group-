@@ -1,0 +1,57 @@
+body{
+    font-family: Arial;
+    margin: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  h1{
+    font-size: 4rem;
+    color:blueviolet
+  }
+  
+  .choices{
+    margin-bottom: 40px;
+  }
+  
+  .choices button{
+    font-size: 3.5rem;
+    min-width: 170px;
+    margin: 0 20px;
+    border-radius: 30px;
+    background-color: hsl(34, 78%, 80%);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+
+  .choices button:hover{
+    background-color: hsl(34, 78%, 90%);
+  }
+  
+  .play button{
+    font-size: 3.5rem;
+    border-radius: 30px;
+    min-width: 170px;
+    background-color:hsl(60, 56%, 80%);
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+  }
+
+  .play button:hover{
+    background-color:hsl(60, 56%, 90%);
+  }
+
+  .picked{
+    font-size: 2.5rem;
+    min-width: 170px;
+    margin: 0 20px;
+    margin-right:465px;
+    margin-top: 50px;
+  }
+
+  #player, #computer{
+    font-size: 2rem;
+    
+  }
