@@ -53,7 +53,8 @@ function ChoiceImage() {
     }
 
     container3.innerHTML = '<img src="' + imgChoice + ' " alt="Player choice"> <img src="';
-    container4.innerHTML = '<img src="' + "graybox.jpg" + ' " alt="Computer choice"></img>';
+    container4.innerHTML = '';
+    document.getElementById('loader').style.display = 'block';
 }
 
 function PlayButton() {
@@ -69,6 +70,7 @@ function PlayButton() {
         compChoice = scissor;
     }
     container4.innerHTML = '<img src="' + compChoice + ' " alt="Computer choice"></img>';
+    document.getElementById('loader').style.display = 'none';
 
         if(player == opponent) {
             console.log("TIE!");
