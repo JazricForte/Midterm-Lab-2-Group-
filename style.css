@@ -1,3 +1,17 @@
+body h1{
+font-size: 4rem;
+color: rebeccapurple;
+text-decoration:underline;
+text-shadow: 4px 4px 4px black;
+background-color: rgb(39, 49, 61, 255);
+width: 2000px;
+height: px;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: bold;
+
+}
 
 body{
     font-family: Arial;
@@ -5,13 +19,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("background.png");
   }
-
-
-  h1{
-    font-size: 4rem;
-    color:blueviolet
-  }
+  
   
   .choices{
     margin-bottom: 40px;
@@ -79,6 +89,12 @@ body{
     z-index: 10;
 }
 
+h2{
+  color: aqua;
+  font-weight: lighter;
+  font-size: 1.75rem;
+}
+
 h3 button{
   font-size: 2rem;
   border-radius: 30px;
@@ -105,4 +121,10 @@ h3 button{
     margin: 0 20px;
     margin-right:465px;
     margin-top: 50px;
+  }
+
+  .player{
+    color: rgba(34,105,136,255);
+    font-weight: bold;
+    font-size: 2rem;
   }

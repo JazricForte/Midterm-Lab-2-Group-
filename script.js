@@ -20,6 +20,7 @@ var papel = "papel.jpg";
 var scissor = "scissor.jpg";
 
 
+
 function RandomNumber(max) {
     return Math.floor(Math.random() * max);
 }
